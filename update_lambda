@@ -1,0 +1,12 @@
+#
+# Upload new zip package to aws
+#
+# This imply you've installed aws cli and configure your environment for aws run for the given region, given profile
+# (you can run aws lambda list-functions or aws ec2 describe-instances to ensure it's working)
+#
+# lambda function name (to get functions for example: aws lambda list-functions --query "Functions[*].FunctionName")
+#
+functionName="$1"
+#
+# update function code
+aws lambda update-function-code --function-name $functionName --zip-file fileb://lambdaPackage.zip

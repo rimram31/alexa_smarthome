@@ -1,0 +1,3 @@
+# Build new zip
+rm lambdaPackage.zip
+zip -r lambdaPackage.zip config.json lambdaSmartHomeServer.py idna urllib3 certifi chardet requests
