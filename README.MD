@@ -65,6 +65,8 @@ alexa:
 
 Restart Home Assistant, you can chek if the endpoint ``` http://<your ha ip>:<port>/api/alexa/smart_home```  is now up (=> https://github.com/home-assistant/home-assistant/blob/dev/homeassistant/components/alexa/smart_home.py#L60)
 
+Be careful with HA configuration, ```include_domains``` include all devices of the domain by default, I'm not using it and add manually one to one devices I want to control with Alexa.
+
 [Home Assistant Alexa]: https://www.home-assistant.io/components/alexa/
 [haaska]: https://github.com/mike-grant/haaska
 [Alexicz]: https://github.com/rimram31/dz_smarthome
