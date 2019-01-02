@@ -46,7 +46,7 @@ Note: If you change lambda code and this will change dependencies, I'm using a v
 
 Check perhaps first that your [Home Assistant Rest API] if working, you can check this with a simple curl command (see the documentation)
 
-As this is using the "smart home" alexa component (Home Assistant have also a cloud Alexa integration, this one is not the cloud one), you need to enter a alexa/smart_home section in your HA configuration (see again [Home Assistant Alexa] Smat Home part):
+As this is using the "smart home" alexa component (Home Assistant have also a cloud Alexa integration, this one is not the cloud one), you need to enter a alexa/smart_home section in your HA configuration (see again [Home Assistant Alexa] Smart Home part):
 
 ```yaml
 alexa:
@@ -67,7 +67,7 @@ Restart Home Assistant, you can chek if the endpoint ``` http://<your ha ip>:<po
 
 Be careful with HA configuration, ```include_domains``` include all devices of the domain by default, I'm not using it and add manually one to one devices I want to control with Alexa.
 
-[Home Assistant Alexa]: https://www.home-assistant.io/components/alexa/
+[Home Assistant Alexa]: https://www.home-assistant.io/components/alexa/#smart-home
 [haaska]: https://github.com/mike-grant/haaska
 [Alexicz]: https://github.com/rimram31/dz_smarthome
 [Home Assistant Rest API]: https://developers.home-assistant.io/docs/en/external_api_rest.html
