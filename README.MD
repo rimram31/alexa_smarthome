@@ -25,7 +25,7 @@ vi config.json
 
 ## Packaging/updating the lambda
 
-Install requets lambda dependency (in lambda repository)
+Install requests lambda dependency (in lambda repository)
 ```sh
 pip3 install requests  --target .
 ```
