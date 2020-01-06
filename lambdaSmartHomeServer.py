@@ -17,7 +17,7 @@ class SmartHomeServer(object):
                                  requests.utils.default_user_agent())
         self.session = requests.Session()
         self.session.headers = {'content-type': 'application/json',
-                                'X-HA-Access': config.password,
+                                'Authorization': 'Bearer ' + config.token,
                                 'User-Agent': agent_fmt}
         self.session.verify = config.ssl_verify
         self.session.cert = config.ssl_client
@@ -63,6 +63,7 @@ class Configuration(object):
         opts['ssl_client'] = self.get(['ssl_client'], default='')
         opts['debug'] = self.get(['debug'], default=False)
         opts['password'] = self.get(['password'], default='')
+        opts['token'] = self.get(['token'], default='')
         self.opts = opts
 
     def __getattr__(self, name):
